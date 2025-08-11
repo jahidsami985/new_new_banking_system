@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Banking System{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'users_app/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Banking System</h1>
+        <nav>
+            <a href="{% url 'signin' %}">Sign In</a> |
+            <a href="{% url 'signup' %}">Sign Up</a> |
+            <a href="{% url 'signout' %}">Sign Out</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
